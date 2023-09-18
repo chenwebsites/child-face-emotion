@@ -23,7 +23,8 @@ public class Main {
 //---------------------------------------------------------------------------			
 		// First approach, just as naive as the "if else if" approach. 
 		//  Easy to read, same time complexity as the "if else if" approach. 
-		//  There is no need to use the equlesIgnoreCase() method or println method for each case. 
+		//  Less memory expensive -  
+		//	equlesIgnoreCase() or println() method will not execute for each if else condition. 
 //		
 //		String emotion;
 //
@@ -64,15 +65,12 @@ public class Main {
 //							HashMap approach  		
 //---------------------------------------------------------------------------		
 
-	// The approch I prefer the most is using the HashMap approach as below.
+	// The approch I prefer the most - Using the HashMap approach as below.
 	// I can use either HashMap or HashTable to map from food input to face emotion.
-	// HashMap and HashTable has a few diffrences,
-	// HashTable does not allow null keys
-	// HashTable is syncronized.
-	// HashMap is prefered is sync is not needed.
-	// In this program the Insertion and Retrivel is being used the must,
-	// and therefore it is the best choise to use this stracture since the time
-	// complexity of insertion and retrivel is O(1)
+	// HashMap is prefered as sync is not needed.
+	// In this program the Insertion and Retrivel is being used the most
+	// therefore it is the best choise to use this stracture.
+	// Time Complexity of insertion and retrivel is O(1)
 	// thanks to hashcode storing.
 	// also we use getOrDefault method that maps to "Error" string in case the input
 	// word does not exist in the HashMap key.
